@@ -1,3 +1,5 @@
+const path = require('path');
+
 exports.config = {
   directConnect: true,
   allScriptsTimeout: 200000,
@@ -14,11 +16,14 @@ exports.config = {
   specs: ["./specs/api.spec.js"],
 
   mochaOpts: {
-    reporter: "spec",
-    slow: 3000,
-    ui: 'bdd',
+    reporter: 'mochawesome',
+    reporterOptions: {
+      reportDir: "reports",
+      overwrite: true,
+      inlineAssets: true,
+      reportPageTitle: "E2E Test Reports",
+      reportTitle: "E2E Test Reports"
+    },
     timeout: 30000
   },
-
-  onPrepare: function () {},
 };
