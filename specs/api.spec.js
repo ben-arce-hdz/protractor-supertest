@@ -23,7 +23,7 @@ describe("/GET - JSON API", function () {
     expect(res.body).to.have.lengthOf(10);
   });
 
-  it.only("test to validates http response body keys", async function () {
+  it("test to validates http response body keys", async function () {
     res.body.forEach(element => {
       expect(element).to.have.all.keys('id', 'name', 'address', 'company', 'email', 'phone', 'username', 'website');
     });
