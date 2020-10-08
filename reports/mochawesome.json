@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-10-08T15:28:26.215Z",
+    "end": "2020-10-08T15:28:26.554Z",
+    "duration": 339,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "188092e1-32ca-43d4-898f-d78bb3417f0a",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [
+        {
+          "title": "\"after each\" hook: ret in \"{root}\"",
+          "fullTitle": "\"after each\" hook: ret in \"{root}\"",
+          "timedOut": false,
+          "duration": 1,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "if (hooks.afterEach) { \n  return hooks.afterEach();\n}",
+          "err": {},
+          "uuid": "f26c4d58-7932-43fe-a17d-203ae2128744",
+          "parentUUID": "188092e1-32ca-43d4-898f-d78bb3417f0a",
+          "isHook": true,
+          "skipped": false
+        }
+      ],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d308154b-4776-4c55-9d30-644f9c7c82af",
+          "title": "/GET - JSON API",
+          "fullFile": "C:\\javascript\\protractor-supertest\\specs\\api.spec.js",
+          "file": "\\specs\\api.spec.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: ret in \"/GET - JSON API\"",
+              "fullTitle": "/GET - JSON API \"before all\" hook: ret in \"/GET - JSON API\"",
+              "timedOut": false,
+              "duration": 293,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "res = await request.get(endPoint.user);",
+              "err": {},
+              "uuid": "496da786-e223-4e26-ba7e-ea80e6031d53",
+              "parentUUID": "d308154b-4776-4c55-9d30-644f9c7c82af",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test to verify a http status code",
+              "fullTitle": "/GET - JSON API Test to verify a http status code",
+              "timedOut": false,
+              "duration": 4,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(1)\nexpect(res.status).to.equal(200)",
+              "err": {},
+              "uuid": "13b1e0a8-162f-43cc-bb9c-1057c5509646",
+              "parentUUID": "d308154b-4776-4c55-9d30-644f9c7c82af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test to verify a http response header",
+              "fullTitle": "/GET - JSON API Test to verify a http response header",
+              "timedOut": false,
+              "duration": 13,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(2)\nexpect(res.headers).to.have.property(\"content-type\");\nexpect(res.headers[\"content-type\"]).to.equal(\"application/json; charset=utf-8\");",
+              "err": {},
+              "uuid": "5152ea1b-04f7-4bec-bb7c-28c8fd5fb2c5",
+              "parentUUID": "d308154b-4776-4c55-9d30-644f9c7c82af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test to verify a http response body",
+              "fullTitle": "/GET - JSON API test to verify a http response body",
+              "timedOut": false,
+              "duration": 4,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(3)\nexpect(res.body).to.have.lengthOf(10);",
+              "err": {},
+              "uuid": "1dc4b365-bd2c-485d-9a08-019f6ebaf9f4",
+              "parentUUID": "d308154b-4776-4c55-9d30-644f9c7c82af",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "13b1e0a8-162f-43cc-bb9c-1057c5509646",
+            "5152ea1b-04f7-4bec-bb7c-28c8fd5fb2c5",
+            "1dc4b365-bd2c-485d-9a08-019f6ebaf9f4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 30000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.1.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports",
+        "overwrite": true,
+        "inlineAssets": true,
+        "reportPageTitle": "API Test Reports",
+        "reportTitle": "API Test Reports"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
