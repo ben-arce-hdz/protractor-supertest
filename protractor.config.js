@@ -1,5 +1,3 @@
-const path = require('path');
-
 exports.config = {
   directConnect: true,
   allScriptsTimeout: 200000,
@@ -21,8 +19,8 @@ exports.config = {
       reportDir: "reports",
       overwrite: true,
       inlineAssets: true,
-      reportPageTitle: "E2E Test Reports",
-      reportTitle: "E2E Test Reports"
+      reportPageTitle: "API Test Reports",
+      reportTitle: "API Test Reports"
     },
     timeout: 30000
   },
